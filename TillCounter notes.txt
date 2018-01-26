@@ -1,0 +1,4 @@
+grid Layout
+CardLayout
+Sterling to Euro conversion in the Amount field
+JOptionPane - input Cash Drop amount
