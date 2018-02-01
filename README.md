@@ -1,2 +1,2 @@
 # Till-Counter
-Second Year Project
+Second Year Project, Software Engineering and Testing
