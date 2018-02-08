@@ -4,4 +4,5 @@ Sterling to Euro conversion in the Amount field(convert)
 JOptionPane - input Cash Drop amount
 input name
 count till twice
+float
 
