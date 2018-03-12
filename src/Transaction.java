@@ -1,4 +1,6 @@
 import java.util.Date;
+import java.util.Vector;
+
 
 public class Transaction {
 
@@ -8,8 +10,8 @@ public class Transaction {
 	public double change;
 	public double moneyRequired;
 	public Item myItem;
-	public Payment myPayment; 
-	public Customer myCustomer; 
+	public Payment myPayment;
+	public Customer myCustomer;
 
 	public Transaction(int id, int cost, Date date, double change) {
 		this.id = id;
