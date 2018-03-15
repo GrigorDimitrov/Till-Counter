@@ -19,4 +19,13 @@ public class Employee {
 	{
 		
 	}
+	
+	public void removeItem(int itemId)
+	{
+		
+	}
+	
+	public void startDailyReport() {
+		
+	}
 }

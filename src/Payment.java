@@ -1,7 +1,7 @@
 
 public class Payment {
 
-	double amount; 
+	double amount = Customer.getPaid(); 
 	
 	public Payment(double amount) {
 		

@@ -1,7 +1,7 @@
 
 public class Customer {
 
-	public double paid;
+	public static double paid;
 	public Transaction myTransaction;
 	
 	public Customer(double paid)
@@ -9,7 +9,7 @@ public class Customer {
 		this.paid = paid;
 	}
 
-	public double getPaid() {
+	public static double getPaid() {
 		return paid;
 	}
 
