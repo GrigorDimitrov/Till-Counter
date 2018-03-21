@@ -30,7 +30,7 @@ public class GUI extends JFrame implements ActionListener {
 
 	public static void main(String[] args) {
 		
-		new GUI();
+	//	new GUI();
 		
 		Vector<String> v = new Vector<String>();
 		String str = new String();
@@ -68,7 +68,7 @@ public class GUI extends JFrame implements ActionListener {
 				//read the next line
 				s = in.readLine();
 			}
-			in.close();
+			in.close(); 
 		} catch (Exception e) {
 			System.out.println("File not found");
 		}
@@ -80,7 +80,7 @@ public class GUI extends JFrame implements ActionListener {
 		System.out.println("-------List of shoes-----");
 		
 		for(int i=0; i<v.size(); i++) {
-			sh = (String) v.elementAt(i);
+			sh = (Shoe) v.elementAt(i);
 		}
 		
 		sh.display();
