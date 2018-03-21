@@ -6,6 +6,11 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 import javax.swing.*;
 
@@ -20,6 +25,10 @@ public class GuiForTill extends JFrame implements ActionListener {
 		JButton backReports = new JButton("Back");
 		
 		JButton subBack = new JButton("Back");
+		
+		Vector<Shoe> v = new Vector<Shoe>();
+		
+		
 
 		
 	public GuiForTill() {
@@ -156,7 +165,56 @@ public class GuiForTill extends JFrame implements ActionListener {
 	public static void main(String[] args) {
 
 		new GuiForTill();
+		
+		Vector<Shoe> v = new Vector<Shoe>();
+		String str = new String();
+		readShoes(v);
+		displayShoes(v);
 
+	}
+	
+	static void readShoes(Vector v) {
+		String s = new String();
+		Shoe sh;
+		try {
+			File f1 = new File("myShoes.txt");
+			FileReader fr = new FileReader(f1);
+			BufferedReader in = new BufferedReader(fr);
+			
+			StringTokenizer t;
+			s = in.readLine();
+			while(s!=null) {
+				t = new StringTokenizer(s);
+				sh = new Shoe();
+				sh.setId(Integer.parseInt(t.nextToken()));
+				sh.setName(t.nextToken());
+				sh.setPrice(Double.parseDouble(t.nextToken()));
+				sh.setColour(t.nextToken());
+				
+				//add to the Vector
+				v.add(sh);
+				
+				//read the next line
+				s = in.readLine();
+			}
+			in.close(); 
+		} catch (Exception e) {
+			System.out.println("File not found");
+		}
+	}
+	
+	static void displayShoes(Vector v) {
+		Shoe sh = null;
+		
+		System.out.println("-------List of shoes-----");
+		
+		for(int i=0; i<v.size(); i++) {
+			sh = (Shoe) v.elementAt(i);
+			sh.display();
+		}
+		
+		
+		
 	}
 
 }

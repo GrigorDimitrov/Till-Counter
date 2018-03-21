@@ -1,3 +1,10 @@
-1 Jordan 299.99 9 red
-2 Jordan 259.99 9.5 black
+1 Jordan11s 299.99 9 red
+2 Jordan12s 259.99 9.5 black
 3 Nike 159.99 11.5 black
+4 Kyries 120.00 9 black
+5 Kobe9s 200.00 9 black
+6 PG13s 120.00 10 purple
+7 Lebron15s 160.00 12 cream
+8 DRose 80.00 8 red
+9 FearlessNike 100.00 10 blue
+10 BBB 250 12 black
